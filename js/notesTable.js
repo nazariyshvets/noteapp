@@ -13,10 +13,7 @@ function createNoteTableEntry(note) {
     day: "numeric",
   });
   //select all dates from a string in the format mm/dd/yyyy
-  const dates =
-    content
-      .match(/\b(?:\d{1,2}\/\d{1,2}\/\d{4}|\d{1,2}\/\d{4})\b/g)
-      ?.join(", ") || "";
+  const dates = getDates(content);
   const row = document.createElement("tr");
 
   row.innerHTML = `
@@ -46,6 +43,18 @@ function createNoteTableEntry(note) {
   `;
 
   return row;
+}
+
+function getDates(string) {
+  try {
+    return (
+      string
+        .match(/\b(?:\d{1,2}\/\d{1,2}\/\d{4}|\d{1,2}\/\d{4})\b/g)
+        ?.join(", ") || ""
+    );
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 function updateNotesTable() {
