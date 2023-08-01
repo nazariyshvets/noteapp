@@ -1,5 +1,5 @@
 //the list of predefined notes
-//isActive parameter specifies if a note is active or archived
+//isActive parameter specifies whether a note is active or archived
 let notes = [
   {
     id: 1,
