@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-block: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 0.5rem;
+  width: 60rem;
+}
+
+/* TABLES */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.table tr {
+  border: 0.5rem solid white;
+  text-align: left;
+}
+
+.table th {
+  padding: 0.5rem;
+  background-color: gray;
+  color: white;
+}
+
+.table th:first-child {
+  padding-left: 3rem;
+}
+
+.table .buttons {
+  text-align: right;
+}
+
+.table .buttons > button {
+  margin-left: 0.5rem;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.table td .buttons > button {
+  color: gray;
+}
+
+.table td {
+  max-width: 10rem;
+  padding: 0.5rem;
+  background-color: rgba(230, 230, 250, 0.7);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.table td:not(:first-child) {
+  color: gray;
+}
+
+.summary {
+  margin-top: 2rem;
+}
+
+.name-wrapper,
+.note-category-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.name-wrapper .icon,
+.note-category-wrapper .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  padding: 1rem;
+  border-radius: 100rem;
+  background-color: gray;
+  color: white;
+}
+
+.name-wrapper .name,
+.note-category-wrapper .name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* CREATE NOTE */
+.create-note {
+  align-self: flex-end;
+  padding-inline: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.form-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1rem;
+  padding: 4rem;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.form .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.form .name,
+.form .category,
+.form .content,
+.form .submit {
+  padding: 0.4rem;
+  font-size: 1.2rem;
+}
+
+.form .content {
+  resize: none;
+}
+
+.form .submit {
+  cursor: pointer;
+}
+
+/* ARCHIVE TABLE */
+.archive-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.archive-wrapper .close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.archive {
+  width: 70%;
+}
+
+.archive td:last-child {
+  text-align: right;
+}
+
+.archive .unarchive {
+  padding-inline: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
